@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Флюорография и Диаскинтест: современные методы выявления туберкулёза</title>
+    
     <style>
+        /* ШРИФТЫ - абсолютный путь от корня (как в файле 609) */
+        @font-face {
+            font-family: 'Inter';
+            src: url('/fonts/inter-cyrillic-400-normal.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('/fonts/inter-cyrillic-500-normal.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('/fonts/inter-cyrillic-600-normal.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('/fonts/inter-cyrillic-700-normal.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', 'Times New Roman', serif;
         }
         
         body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.7;
             color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
@@ -496,16 +530,16 @@
             <div class="image-container">
                 <!-- Замените image8.png на ваш файл -->
                 <img src="image8.png" alt="Начальная форма туберкулеза">
-                <p class="image-caption"><span class="image-number">Рис. 8</span> Пациент «Г» — пример визуализации начальной формы туберкулёзного процесса в лёгких в сравнении слева по данным флюорографии и справа по данным компьютерной томографии (по данным хореографии слева изменения не видны. Справа, по данным КТ, можно увидеть мелкий очаг) .</p>
+                <p class="image-caption"><span class="image-number">Рис. 8</span> Пациент «Г» — пример визуализации начальной формы туберкулёзного процесса в лёгких в сравнении слева по данным флюорографии и справа по данным компьютерной томографии (по данным флюорографии слева изменения не видны. Справа, по данным КТ, можно увидеть мелкий очаг).</p>
             </div>
             
             <div class="question-box">
-                <p class="question">Красным отмечены начальные изменения выявленные на компьютерной томограмме ( предыдущий рисунок )</p>
+                <p class="question">Красным отмечены начальные изменения, выявленные на компьютерной томограмме (предыдущий рисунок)</p>
                 
                 <div class="image-container" style="margin: 20px 0;">
                     <!-- Замените image9.png на ваш файл -->
                     <img src="image9.png" alt="КТ снимок пациента Г">
-                    <p class="image-caption"><span class="image-number">Рис. 10</span> Пациент «Г».</p>
+                    <p class="image-caption"><span class="image-number">Рис. 9</span> Пациент «Г».</p>
                 </div>
                 
                 <p class="question">Вопрос: Почему пациенту была назначена компьютерная томография, если на флюорографическом снимке (Рис. 8) изменений не видно?</p>
@@ -522,15 +556,13 @@
         <div class="footer">
             <p>Информационный материал о методах скрининга и диагностики туберкулёза.</p>
             <p>Все изображения являются учебными материалами, текст адаптирован для пациентов</p>
-            <p style="margin-top: 15px; color: #95a5a6; font-size: 14px;"> Автор: Лукаш И. А.  
-Заведующий филиалом Клинский ГБУЗМО МОКПТД</p>
+            <p style="margin-top: 15px; color: #95a5a6; font-size: 14px;">Автор: Лукаш И. А. Заведующий филиалом Клинский ГБУЗ МО МОКПТД</p>
         </div>
     </div>
     
     <script>
-        // Скрипт для улучшения печати
         document.addEventListener('DOMContentLoaded', function() {
-            // Добавляем специальные стили для печати
+            // Стили для печати
             const printStyles = document.createElement('style');
             printStyles.innerHTML = `
                 @media print {
@@ -567,14 +599,6 @@
                 }
             `;
             document.head.appendChild(printStyles);
-            
-            // Добавляем нумерацию страниц при печати
-            window.addEventListener('beforeprint', function() {
-                const pageNumbers = document.createElement('div');
-                pageNumbers.id = 'page-numbers';
-                pageNumbers.style.cssText = 'position: fixed; bottom: 10px; right: 20px; font-size: 12px; color: #666;';
-                document.body.appendChild(pageNumbers);
-            });
         });
     </script>
 </body>
